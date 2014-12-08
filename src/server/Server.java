@@ -29,7 +29,7 @@ public class Server {
 	}
 
 	public static void waitForConnection() {
-		System.out.println("Waiting for connection.");
+		System.out.println("Waiting for connection...");
 		while(true) {
 			try {
 				Socket client = server.accept();
