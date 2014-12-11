@@ -18,6 +18,7 @@ public class ServerComfy extends Comfy {
 	public void closeAll() throws IOException {
 		super.closeAll();
 		try {
+			Server.leaveAllRooms(name);
 			Server.removeUser(name);
 		} catch (JSONException e) {
 			e.printStackTrace();

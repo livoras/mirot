@@ -44,6 +44,7 @@ public class LoginAction extends Action {
 		comfy.name = name;
 		Server.users.put(name, newUser);
 		Sender.sendUsersList();
+		Sender.sendRoomsList();
 		Logger.log(name + " login, current totoal online users count " + Server.users.size());
 		callback();
 	}
