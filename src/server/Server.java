@@ -26,7 +26,8 @@ public class Server {
 	}
 
 	public static void initServerSocekt() throws IOException {
-		server = new ServerSocket(Configuration.PORT);
+	    Configuration config = new Configuration();
+		server = new ServerSocket(config.PORT);
 	}
 
 	public static void waitForConnection() throws IOException {
@@ -51,10 +52,6 @@ public class Server {
 			String roomName = entry.getKey();
 			if (users.remove(toRemoveUser)) {
 				Logger.log("Remove user " + toRemoveUser.name + " from a room: " + roomName);
-				// Here should delete the room while there is nobody in the room.
-//				if (users.size() == 0) {
-//				    rooms.remove(roomName);
-//				}
 			}
 		}
 	}

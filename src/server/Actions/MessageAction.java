@@ -1,6 +1,5 @@
 package server.Actions;
 
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 import org.json.JSONException;
